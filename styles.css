@@ -1,0 +1,65 @@
+.kickStyle {
+
+position: absolute;
+width: 183px;
+height: 164px;
+left: 47px;
+top: 356px;
+
+filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.15));
+
+background: #E01700;
+border: 2px solid #333333;
+box-sizing: border-box;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+
+}
+
+.hihatStyle {
+
+position: absolute;
+width: 183px;
+height: 164px;
+left: 250px;
+top: 356px;
+background: #F48100;
+border: 2px solid #333333;
+box-sizing: border-box;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+
+}
+
+.snareStyle {
+
+position: absolute;
+width: 183px;
+height: 164px;
+left: 453px;
+top: 356px;
+background: #E7E8C3;
+border: 2px solid #333333;
+box-sizing: border-box;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+
+}
+
+.cowbellStyle {
+
+position: absolute;
+width: 183px;
+height: 164px;
+left: 656px;
+top: 356px;
+background: #C4C4C4;
+border: 2px solid #333333;
+box-sizing: border-box;
+box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+
+}
+
+
+
