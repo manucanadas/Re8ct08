@@ -19,6 +19,7 @@ function Drum() {
         <button onClick={() => play({ id: 'kick' })}>Kick</button>
         <button onClick={() => play({ id: 'hihat' })}>Hihat</button>
         <button onClick={() => play({ id: 'snare' })}>Snare</button>
+        <button onClick={() => play({ id: 'cowbell' })}>Cowbell</button>
        
 
 
