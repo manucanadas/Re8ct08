@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <Route exact path ='/' component = {Drum}/>
-      <Route exact path ='step' component = {Sound}/>
+      <Route exact path ='/step' component = {Sound}/>
    </>
   )
 }
