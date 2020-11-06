@@ -23,15 +23,46 @@ const useKeyboardBindings = map => {
 
 function Demo() {
     const soundUrl = './909-drums.mp3';
-    const Loop1 = './Loops/Loop1.mp3';const Loop2= './Loops/Loop2.mp3';const Loop3 = './Loops/Loop3.mp3';const Loop4 = './Loops/Loop4.mp3';const Loop5 = './Loops/Loop5.mp3';
-    const Notes1 = './Notes/Bass1.mp3';const Notes2 = './Notes/Clap1.mp3';const Notes3 = './Notes/Cymb10.mp3';const Notes4 = './Notes/Gritty1.mp3';const Notes5 = './Notes/Hat1.mp3';const Notes6 = './Notes/Hat2.mp3';const Notes7 = './Notes/Kick1.mp3';const Notes8 = './Notes/Kick2.mp3';
+    // const Loop1 = './Loops/Loop1.mp3';
+    // const Loop2= './Loops/Loop2.mp3';
+    // const Loop3 = './Loops/Loop3.mp3';
+    // const Loop4 = './Loops/Loop4.mp3';
+    // const Loop5 = './Loops/Loop5.mp3';
+    const Notes1 = './Notes/Bass1.mp3';
+    const Notes2 = './Notes/Clap1.mp3';
+    const Notes3 = './Notes/Cymb10.mp3';
+    const Notes4 = './Notes/Gritty1.mp3';
+    // const Notes5 = './Notes/Hat1.mp3';
+    // const Notes6 = './Notes/Hat2.mp3';
+    // const Notes7 = './Notes/Kick1.mp3';
+    // const Notes8 = './Notes/Kick2.mp3';
 
 
     const [play1] = useSound(Notes1,{
       sprite:{
-        Bass1: [0, 350],
+        Bass1: [0, 1000],
       }
     })
+
+    const [play2] = useSound(Notes2,{
+      sprite:{
+        Clap1: [0, 1000],
+      }
+    })
+
+    const [play3] = useSound(Notes3,{
+      sprite:{
+        Cymb10: [0, 5000],
+      }
+    })
+
+
+    const [play4] = useSound(Notes4,{
+      sprite:{
+        Gritty1: [0, 1000],
+      }
+    })
+
 
 
 
@@ -51,7 +82,11 @@ function Demo() {
       2: () => play({ id: 'hihat' }),
       3: () => play({ id: 'snare' }),
       4: () => play({ id: 'cowbell' }),
-      5: () => play1({id: 'loop'})
+      5: () => play1({id: 'bass'}),
+      6: () => play2({id: 'Clap'}),
+      7: () => play3({id: 'Cymb'}),
+      8: () => play4({id: 'Gritty'}),
+
     })
   
     return (
