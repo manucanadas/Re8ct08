@@ -1,5 +1,24 @@
 import React from 'react'
 import useSound from 'use-sound'
+import {Link} from 'react-router-dom'
+
+const useKeyboardBindings = map => {
+  React.useEffect(() => {
+    const handlePress = ev => {
+      const handler = map[ev.key];
+
+      if (typeof handler === 'function') {
+        handler();
+      }
+    };
+
+    window.addEventListener('keydown', handlePress);
+
+    return () => {
+      window.removeEventListener('keydown', handlePress);
+    };
+  }, [map]);
+};
 
 function Drum() {
     const soundUrl = './909-drums.mp3';
@@ -47,7 +66,25 @@ function Drum() {
       }
     })
 
+    useKeyboardBindings({
+      1: () => play({ id: 'kick' }),
+      2: () => play({ id: 'hihat' }),
+      3: () => play({ id: 'snare' }),
+      4: () => play({ id: 'cowbell' }),
+      5: () => play1({id: 'Bass1'}),
+      6: () => play2({id: 'Clap1'}),
+      7: () => play3({id: 'Cymb10'}),
+      8: () => play4({id: 'Gritty1'}),
+      q: () => play({ id: 'kick' }),
+      w: () => play({ id: 'hihat' }),
+      e: () => play({ id: 'snare' }),
+      a: () => play({ id: 'cowbell' }),
+      s: () => play1({id: 'Bass1'}),
+      d: () => play2({id: 'Clap1'}),
+      z: () => play3({id: 'Cymb10'}),
+      x: () => play4({id: 'Gritty1'})
 
+    })
 
 
     return (
@@ -61,8 +98,11 @@ function Drum() {
         <button className = 'sharpStyle' onClick={() => play3({ id: 'Cymb10' })}>Cymb</button>
         <button className = 'cowbellStyle' onClick={() => play({ id: 'cowbell' })}>Cowbell</button>   
         <button className = 'cowbellStyle' onClick={() => play4({ id: 'Gritty1' })}>Gritty</button>
-
-       
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <button><Link to={'/step/'}>Step Sequencer</Link></button>
 
 
         </>
